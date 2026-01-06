@@ -1,87 +1,113 @@
-# Welcome to React Router!
+# John.Dev Portfolio
 
-A modern, production-ready template for building full-stack React applications using React Router.
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+A modern, responsive portfolio website built with React, JavaScript, and Tailwind CSS, featuring shadcn/ui components.
 
 ## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- 🌙 Dark/Light mode toggle
+- 📱 Fully responsive design
+- ⚡ Fast and modern React with Vite
+- 🎨 Beautiful UI with shadcn/ui components
+- 🎯 Smooth scrolling navigation
+- 📧 Contact form
+- 🚀 Optimized performance
+
+## Tech Stack
+
+- **Frontend**: React 19, JavaScript (ES6+)
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui
+- **Build Tool**: Vite
+- **Icons**: Font Awesome
+- **Fonts**: Inter & JetBrains Mono
 
 ## Getting Started
 
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+
 ### Installation
 
-Install the dependencies:
+1. Clone the repository
+```bash
+git clone <repository-url>
+cd react-portfolio
+```
 
+2. Install dependencies
 ```bash
 npm install
 ```
 
-### Development
-
-Start the development server with HMR:
-
+3. Start the development server
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## Building for Production
-
-Create a production build:
+### Build for Production
 
 ```bash
 npm run build
 ```
 
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
+### Preview Production Build
 
 ```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+npm run preview
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
+## Project Structure
 
 ```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
+src/
+├── components/
+│   ├── ui/           # shadcn/ui components
+│   │   ├── button.jsx
+│   │   ├── card.jsx
+│   │   ├── input.jsx
+│   │   └── textarea.jsx
+│   ├── Header.jsx    # Navigation header
+│   ├── Hero.jsx      # Hero section
+│   ├── About.jsx     # About section
+│   ├── Skills.jsx    # Skills section
+│   ├── Projects.jsx  # Projects showcase
+│   ├── Contact.jsx   # Contact form
+│   └── Footer.jsx    # Footer
+├── lib/
+│   └── utils.js      # Utility functions
+├── App.jsx           # Main app component
+├── main.jsx          # Entry point
+└── index.css         # Global styles
 ```
 
-## Styling
+## Customization
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+### Colors
+Update the color scheme in `tailwind.config.js`:
 
----
+```javascript
+colors: {
+  primary: "#10b981",        // Main brand color
+  "primary-hover": "#059669", // Hover state
+  // ... other colors
+}
+```
 
-Built with ❤️ using React Router.
+### Content
+- Update personal information in each component
+- Replace placeholder images with your own
+- Modify the skills, projects, and contact information
+- Update social media links
+
+### Fonts
+The project uses Inter and JetBrains Mono fonts. You can change them in:
+- `tailwind.config.js` (Tailwind configuration)
+- `index.html` (Google Fonts imports)
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
